@@ -1,0 +1,9 @@
+<%= @movies.each do |movie| %>
+  <div>
+    <%= movie.id %>
+    <%= link_to movie.name, movie_path(movie) %>
+    <%= movie.release_date %>
+  </div>
+<% end %>
+
+
