@@ -1,7 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
-
+    @movies = current_user.movies.order(created_at: :desc)
   end
 
   def show
