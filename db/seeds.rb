@@ -3,3 +3,6 @@
 User.create!(email: "fidan@movies.com", password: "12345678")
 User.create!(email: "master.commander@movies.com", password: "12345678")
 User.create!(email: "vojtech@movies.com", password: "12345678")
+
+
+Movie.create!()

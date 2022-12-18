@@ -99,6 +99,8 @@ GEM
       warden (~> 1.2.3)
     erubi (1.11.0)
     execjs (2.8.1)
+    faker (3.0.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.15.5)
     font-awesome-sass (6.2.1)
       sassc (~> 2.0)
@@ -243,6 +245,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-20
+  x86_64-darwin-22
 
 DEPENDENCIES
   autoprefixer-rails
@@ -250,6 +253,7 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  faker (~> 3.0)
   font-awesome-sass (~> 6.1)
   jbuilder (~> 2.7)
   listen (~> 3.3)
@@ -268,7 +272,7 @@ DEPENDENCIES
   webpacker (~> 5.0)
 
 RUBY VERSION
-   ruby 2.6.6p146
+   ruby 3.1.2p20
 
 BUNDLED WITH
    2.2.26
