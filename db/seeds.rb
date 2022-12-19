@@ -3,11 +3,14 @@ User.create!(email: "master.commander@movies.com", password: "12345678")
 User.create!(email: "vojtech@movies.com", password: "12345678")
 
 100.times do |index|
-  MyMovie.create!(
+  params = {
     name: "#{FFaker::Movie.title} w/ seeded index #{index}",
     description: FFaker::Name.name,
     release_date: FFaker::Time.between(50.years.ago, Date.today)
-  )
+  }
+
+  MyMovie.create!(params)
+  AllMovie.create!(params)
 end
 
 User.all.each_with_index do |user, i|

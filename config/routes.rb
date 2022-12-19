@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   resources :my_movies, only: [:index, :show]
+  resources :all_movies, only: [:index, :show]
 end
