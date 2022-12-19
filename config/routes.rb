@@ -3,10 +3,10 @@ Rails.application.routes.draw do
 
 
   authenticated :user do
-    root 'movies#index', as: :authenticated_root
+    root 'my_movies#index', as: :authenticated_root
   end
 
   root to: "pages#home"
 
-  resources :movies, only: [:index, :show]
+  resources :my_movies, only: [:index, :show]
 end

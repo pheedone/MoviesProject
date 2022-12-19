@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_12_18_140157) do
+ActiveRecord::Schema.define(version: 2022_12_19_224749) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "movies", force: :cascade do |t|
+  create_table "my_movies", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.string "release_date"
@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(version: 2022_12_18_140157) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "user_movies", force: :cascade do |t|
+  create_table "user_my_movies", force: :cascade do |t|
     t.bigint "user_id", null: false
-    t.bigint "movie_id", null: false
-    t.index ["movie_id"], name: "index_user_movies_on_movie_id"
-    t.index ["user_id"], name: "index_user_movies_on_user_id"
+    t.bigint "my_movie_id", null: false
+    t.index ["my_movie_id"], name: "index_user_my_movies_on_my_movie_id"
+    t.index ["user_id"], name: "index_user_my_movies_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,6 +42,6 @@ ActiveRecord::Schema.define(version: 2022_12_18_140157) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "user_movies", "movies"
-  add_foreign_key "user_movies", "users"
+  add_foreign_key "user_my_movies", "my_movies"
+  add_foreign_key "user_my_movies", "users"
 end

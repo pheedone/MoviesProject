@@ -4,6 +4,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :user_movies, dependent: :destroy
-  has_many :movies, through: :user_movies
+  has_many :user_my_movies, dependent: :destroy
+  has_many :my_movies, through: :user_movies
 end
