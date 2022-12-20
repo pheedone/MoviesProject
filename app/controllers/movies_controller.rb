@@ -1,6 +1,8 @@
 class MoviesController < ApplicationController
+  include Pagy::Backend
+
   def index
-    @movies = current_user.movies.order(created_at: :desc)
+    @pagy, @movies = pagy(current_user.movies.order(created_at: :desc), items: 30)
   end
 
   def show
