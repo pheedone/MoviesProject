@@ -49,6 +49,7 @@ group :development do
   # gem 'spring'
   gem 'ffaker', '~> 2.21'
   gem 'rails_real_favicon'
+  gem 'pagy', '~> 5.10', '>= 5.10.1'
 end
 
 group :test do
